@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# List information about the given dotfiles folder
+
+if [ $# -eq 0 ]; then
+	echo "Usage: ./dotfiles_info <path_dotfiles_dir>"
+	exit 1
+fi
+
+
+dotfiles_dir=$1
+if [ ! -d "${dotfiles_dir}" ]; then
+	echo "Error: '${dotfiles_dir}' is not a directory" >&2
+	exit 1
+fi
+
+today=$(date +%d.%m.%Y)
+shopt -s nullglob dotglob
+entries=("${dotfiles_dir}"/*)
+count_dotfiles=${#entries[@]}
+
+
+echo "=== Dotfiles Information ==="
+echo "User: ${USER}"
+echo "Dotfiles dir: ${dotfiles_dir}"
+echo "Dotfiles count: ${count_dotfiles}"
+echo "Date: ${today}"
