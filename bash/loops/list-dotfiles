@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# List dotfiles in the given directory
+
+if [[ -z "$1" || "$1" == "--help" ]]; then
+	echo "Usage: $0 <directory>"
+	exit 1
+fi
+cd "$1" || exit 1
+shopt -s dotglob
+for file in *; do
+	[[ "$file" == .* ]] || continue
+	echo "Dotfile: $file"
+done  
+
+

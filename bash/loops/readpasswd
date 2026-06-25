@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Read /etc/passwd
+
+while IFS=: read -r user _ uid gid _ home shell; do
+	echo "$user (UID $uid:GID $gid) uses $shell and his home -> $home"
+done < /etc/passwd

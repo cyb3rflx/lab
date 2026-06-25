@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Read line by line from file
+
+
+while read -r line; do
+	echo "Line: $line"
+done < /etc/hosts
