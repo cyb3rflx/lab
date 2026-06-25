@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Takes a fruit name and tells you its color
+
+
+case $1 in
+	apple)
+		echo "red"
+		;;
+	banana)
+		echo "yellow"
+		;;
+	kiwi)
+		echo "green"
+		;;
+	*)
+		echo "Usage: $0 {apple|banana|kiwi}"
+		exit 1
+		;;
+esac
+
