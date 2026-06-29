@@ -1,0 +1,20 @@
+#!/bin/bash
+
+my_function() {
+	name="Changed"
+
+}
+
+name="Test"
+my_function
+echo "$name"
+
+
+my_local_function() {
+	local inside_variable="Inside Function"
+	echo "$inside_variable"
+}
+
+inside_variable="Outside Function"
+my_local_function
+echo "$inside_variable"
