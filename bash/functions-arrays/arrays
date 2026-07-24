@@ -1,0 +1,17 @@
+#!/bin/bash
+
+fruits=("apple" "bannana" "cherry")
+
+#First element
+echo "${fruits[0]}"
+
+#All elements
+echo "${fruits[@]}"
+
+#Length
+echo "${#fruits[@]}"
+
+#Add element
+fruits+=("grape")
+
+echo "${fruits[@]}"

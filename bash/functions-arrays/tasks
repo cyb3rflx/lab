@@ -1,0 +1,12 @@
+#!/bin/bash
+
+print_numbered() {
+	local items=("$@")
+	local i=1
+	for item in "${items[@]}"; do
+		echo "${i}. ${item}"
+		(( i++ ))
+	done
+}
+
+print_numbered "Buy milk" "Buy water" "Buy coffee"

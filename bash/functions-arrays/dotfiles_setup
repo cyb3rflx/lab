@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Description: Link dotfiles to home directory
+
+
+link_dotfile() {
+	local src="$1"
+	local dest="$2"
+	ln -sf "$src" "$dest"
+	echo "Linked: $dest"
+}
+
+dotfiles=(".bashrc")
+
+for item in "${dotfiles[@]}"; do
+	link_dotfile "$HOME/test_dotfiles/$item" "$HOME/test_home/$item"
+done
+
+echo "Done"
