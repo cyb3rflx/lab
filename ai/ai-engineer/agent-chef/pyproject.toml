@@ -1,0 +1,12 @@
+[project]
+name = "agent-chef"
+version = "0.1.0"
+description = "Zeigt dir welche Gerichte du mit deinen Zutaten kochen kannst."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain>=1.2.15",
+    "langchain-openai>=1.1.16",
+    "python-dotenv>=1.2.2",
+    "tavily>=1.1.0",
+]
